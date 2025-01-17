@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <video id="backgroundVideo" autoplay muted loop>
+        <source src="video/89894-616430996_medium.mp4" type="video/mp4"> <!-- Replace with your video file path -->
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="game-container">
+        <h1>Number Guessing Game</h1>
+        <p>Guess the number between 1 and 1000</p>
+        <input type="number" id="guessInput" placeholder="Enter your guess">
+        <button onclick="checkGuess()" id="guessButton">Guess</button>
+        <button onclick="restartGame()">Restart</button>
+        <p id="feedback"></p>
+        <p>Attempts: <span id="attempts">0</span>/10</p>
+    </div>
+
+    <!-- Sound Effects -->
+    <audio id="winSound" src="audio/mixkit-ending-show-audience-clapping-478.wav"></audio>
+    <audio id="loseSound" src="audio/ahhhh-108438.mp3"></audio>
+    <audio id="playingSound" src="audio/crowd-shouting-hey-hey-hey-272059.mp3" loop></audio>
+    <audio id="firstTurnSound" src="audio/are-you-ready-90703.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
